@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="col-full">
     <h1>Welcome to the Forum</h1>
-    <ThreadList />
+    <ThreadList :threads="threads" />
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
   },
   data () {
     return {
-      threads: sourceData.threads,
+      threads: Object.values(sourceData.threads),
       posts: sourceData.posts,
       users: sourceData.users
     }
